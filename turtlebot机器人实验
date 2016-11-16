@@ -1,0 +1,4 @@
+
+如果机器人的Kobuki底盘控制出现问题，可以尝试刷新 Kobuki's USB connection，执行命令：
+rosrun kobuki_ftdi create_udev_rules
+（需要安装程序：sudo apt-get install ros-hydro-turtlebot ros-hydro-turtlebot-apps ros-hydro-turtlebot-viz ros-hydro-turtlebot-simulator ros-hydro-kobuki-ftdi）
