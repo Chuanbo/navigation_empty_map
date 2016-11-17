@@ -1,0 +1,5 @@
+<launch>
+
+  <node name="robot_0" pkg="my_patrol_robot" type="my_patrol_turtlebot" args="0 $(find my_patrol_robot)/world/corridor.graph" output="screen" />
+
+</launch>

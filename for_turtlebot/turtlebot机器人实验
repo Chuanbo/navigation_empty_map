@@ -1,0 +1,21 @@
+
+修改代码以进行turtlebot机器人实验
+navigation_empty_map/launch/includes/gmapping.launch.xml
+  删除参数中的前缀 <param name="base_frame" value="robot_0/base_footprint"/> 等
+navigation_empty_map/launch/navigation_empty_map.launch
+navigation_empty_map/launch/navigation_with_gmapping.launch
+  删除 <group ns="robot_0"> 和 <param name="tf_prefix" value="robot_0" /> 等
+  删除参数中的前缀 <param name="odom_frame_id" value="robot_0/odom" /> 和 <arg name="scan_topic" value="robot_0/base_scan" /> 等
+
+启动turtlebot机器人
+roslaunch turtlebot_bringup minimal.launch
+roslaunch turtlebot_bringup 3dsensor.launch
+其他应用
+roslaunch turtlebot_rviz_launchers view_robot.launch
+roslaunch turtlebot_teleop keyboard_teleop.launch
+roslaunch turtlebot_navigation gmapping_demo.launch
+roslaunch turtlebot_rviz_launchers view_navigation.launch
+
+如果机器人的Kobuki底盘控制出现问题，可以尝试刷新 Kobuki's USB connection，执行命令：
+rosrun kobuki_ftdi create_udev_rules
+（需要安装程序：sudo apt-get install ros-hydro-turtlebot ros-hydro-turtlebot-apps ros-hydro-turtlebot-viz ros-hydro-turtlebot-simulator ros-hydro-kobuki-ftdi）
