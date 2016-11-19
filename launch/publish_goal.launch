@@ -1,0 +1,11 @@
+<launch>
+
+
+  <param name="goal_x" value="5" />
+  <param name="goal_y" value="-1" />
+  <param name="goal_theta" value="0" />
+
+  <node pkg="navigation_empty_map" type="publish_goal" name="publish_goal" output="screen" />
+
+
+</launch>

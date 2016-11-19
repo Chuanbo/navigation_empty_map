@@ -138,6 +138,10 @@ add_executable(robot_move
   src/my_robot.cpp
 )
 
+add_executable(publish_goal
+  src/publish_goal.cpp
+)
+
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(navigation_empty_map_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
@@ -148,6 +152,10 @@ add_executable(robot_move
 # )
 
 target_link_libraries(robot_move
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(publish_goal
   ${catkin_LIBRARIES}
 )
 
