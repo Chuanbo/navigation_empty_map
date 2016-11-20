@@ -26,4 +26,4 @@ del draw  # 释放画图对象所占内存
 
 mapImage.show()
 
-mapImage.save("/home/exbot/square20m.pgm")
+mapImage.save("square20m.pgm")

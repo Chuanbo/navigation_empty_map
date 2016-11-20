@@ -59,4 +59,4 @@ del draw  # 释放画图对象所占内存
 
 mapImage.show()
 
-mapImage.save("/home/ychb/patrol_and_search/corridor.pgm")
+mapImage.save("corridor.pgm")
